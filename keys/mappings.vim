@@ -4,7 +4,9 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 :nnoremap <leader>t :split term\| bel terminal<CR>
 " Better window navigation
-nnoremap <C-h> <C-w>h
+if has('nvim')
+  nnoremap <silent> <C-w>h
+endif
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
